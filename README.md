@@ -1,2 +1,2 @@
 # springcloud
-springcloud看框架的demo
+springcloud框架的demo
