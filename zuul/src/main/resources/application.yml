@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: product-service-zuul
+#进行路由映射
+zuul:
+  routes:
+    api-a:
+      path: /api-data/**
+      serviceId: PRODUCT-DATA-SERVICE
+    api-b:
+      path: /api-view/**
+      serviceId: product-view-service-feign #不知为何大写不能运行PRODUCT-VIEW-SERVICE-FEIGN
